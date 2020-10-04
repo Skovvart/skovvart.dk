@@ -1,0 +1,22 @@
+:root {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5em;
+
+  @media (max-width: 480px) {
+    font-size: 16px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.5em;
+  font-family: "Roboto Slab", serif;
+}
+a {
+  color: var(--color-link);
+}

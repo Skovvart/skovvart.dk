@@ -1,0 +1,10 @@
+html {
+  min-height: 100vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  background-color: var(--color-primary);
+  background-image: var(--gradient-dark);
+}
