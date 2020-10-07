@@ -6,19 +6,17 @@ jobs:
   build_deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Debug script
-        run: echo --legacy --entry \"/ 404\" \\\"
       - uses: actions/checkout@master
-      - name: Export Sapper
-        uses: truewebartisans/actions-sapper@master
-        with:
-          args: --legacy --entry \\"/ 404\\"
-      - name: Upload to FTP
-        uses: sebastianpopp/ftp-action@releases/v2
-        with:
-          host: ${{ secrets.FTP_SERVER }}
-          user: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          localDir: __sapper__/export
-          remoteDir: public_html
-          forceSsl: true
+      - name: npm install
+        run: npm install
+      - name: sapper export
+        run: npx sapper export --legacy --entry \"/ /404\"
+      # - name: Upload to FTP
+      #   uses: sebastianpopp/ftp-action@releases/v2
+      #   with:
+      #     host: ${{ secrets.FTP_SERVER }}
+      #     user: ${{ secrets.FTP_USER }}
+      #     password: ${{ secrets.FTP_PASSWORD }}
+      #     localDir: __sapper__/export
+      #     remoteDir: public_html
+      #     forceSsl: true
