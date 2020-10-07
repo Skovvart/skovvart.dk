@@ -20,3 +20,8 @@ jobs:
           localDir: __sapper__/export
           remoteDir: public_html
           forceSsl: true
+    - name: Purge cloudflare cache
+      uses: jakejarvis/cloudflare-purge-action@master
+      env:
+        CLOUDFLARE_ZONE: ${{ secrets.CF_ZONE_ID }}
+        CLOUDFLARE_TOKEN: ${{ secrets.CF_API_KEY }}
