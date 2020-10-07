@@ -10,7 +10,7 @@ jobs:
       - name: Export Sapper
         uses: truewebartisans/actions-sapper@master
         with:
-          args: "--legacy --entry \"index 404\""
+          args: "--legacy --entry \"/index.html /404.html\""
       - name: Upload to FTP
         uses: sebastianpopp/ftp-action@releases/v2
         with:
