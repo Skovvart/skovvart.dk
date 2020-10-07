@@ -6,11 +6,13 @@ jobs:
   build_deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Debug script
+        run: echo --legacy --entry \"/ 404\" \\\"
       - uses: actions/checkout@master
       - name: Export Sapper
         uses: truewebartisans/actions-sapper@master
         with:
-          args: --legacy --entry \"/ 404\"
+          args: --legacy --entry \\"/ 404\\"
       - name: Upload to FTP
         uses: sebastianpopp/ftp-action@releases/v2
         with:
