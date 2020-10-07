@@ -11,11 +11,12 @@ jobs:
         uses: truewebartisans/actions-sapper@master
         with:
           args: '--legacy --entry "/index.html /404.html"'
-      - name: FTP-Deploy-Action
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+      - name: Upload to FTP
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}#ftp://ftp.samkirkland.com/
-          ftp-username: ${{ secrets.FTP_USER }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: __sapper__/export
-          #git-ftp-args: --insecure
+          host: ${{ secrets.FTP_SERVER }}
+          user: ${{ secrets.FTP_USER }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          localDir: __sapper__/export
+          remoteDir: public_html
+          forceSsl: true
