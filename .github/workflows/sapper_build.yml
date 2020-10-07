@@ -10,7 +10,7 @@ jobs:
       - name: npm install
         run: npm install
       - name: sapper export
-        run: npx sapper export --legacy --entry \\"/ /404\\"
+        run: npx sapper export --legacy --entry \\\"/ /404\\\"
       # - name: Upload to FTP
       #   uses: sebastianpopp/ftp-action@releases/v2
       #   with:
