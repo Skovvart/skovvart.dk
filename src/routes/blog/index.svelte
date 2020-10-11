@@ -2,14 +2,14 @@
   export function preload() {
     return this.fetch(`blog.json`)
       .then((r: { json: () => any }) => r.json())
-      .then((posts: { slug: string; title: string; html: any }[]) => {
+      .then((posts: { slug: string; title: string; body: any }[]) => {
         return { posts };
       });
   }
 </script>
 
 <script lang="ts">
-  export let posts: { slug: string; title: string; html: any }[];
+  export let posts: { slug: string; title: string; body: any }[];
 </script>
 
 <style>

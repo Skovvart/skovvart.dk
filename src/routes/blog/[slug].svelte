@@ -14,7 +14,7 @@
 </script>
 
 <script lang="ts">
-  export let post: { slug: string; title: string; html: any };
+  export let post: { slug: string; title: string; body: any };
 </script>
 
 <style>
@@ -49,5 +49,5 @@
 <h1>{post.title}</h1>
 
 <div class="content">
-  {@html post.html}
+  {@html post.body}
 </div>
