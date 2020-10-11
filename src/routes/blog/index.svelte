@@ -21,6 +21,7 @@
 
 <svelte:head>
   <title>Blog</title>
+  <meta name="description" content="A lovely description about the blog." />
 </svelte:head>
 
 <h1>Recent posts</h1>
