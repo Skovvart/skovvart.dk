@@ -1,6 +1,11 @@
 <script lang="ts">
 </script>
 
+<footer class="footer">
+  <!-- Not sure why I am even including this, but the footer was oh so very empty. Maybe fill in with something better if I ever get actual site content.  -->
+  <div class="copyright">&copy; Copyright 2021, <a rel="author" href="/about">Nicolai Skovvart</a>.</div>
+</footer>
+
 <style lang="scss">
   @import "../styles/theme.scss";
   .footer {
@@ -10,7 +15,3 @@
     color: #{$color-light};
   }
 </style>
-
-<footer class="footer">
-  <p>Some footery stuff</p>
-</footer>
