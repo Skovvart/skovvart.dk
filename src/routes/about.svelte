@@ -1,3 +1,7 @@
+<script lang="ts">
+	import nicolai from './nicolai.webp';
+</script>
+
 <svelte:head>
 	<title>About | skovvart.dk</title>
 	<meta name="description" content="About Nicolai Skovvart and Skovvart.dk" />
@@ -7,7 +11,7 @@
 
 <p>
 	Hi there! I'm Nicolai! <img
-		src="nicolai.webp"
+		src={nicolai}
 		alt="Nicolai Skovvart"
 		width="200"
 		height="200"

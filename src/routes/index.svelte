@@ -1,6 +1,5 @@
 <script lang="ts">
-	// import Card from "../components/Card.svelte";
-	// import FlexWrapper from "../components/FlexWrapper.svelte";
+	import nicolai from './nicolai.webp';
 </script>
 
 <svelte:head>
@@ -9,10 +8,10 @@
 </svelte:head>
 
 <h1>Skovvart.dk</h1>
-<!-- <Card pixumImageId={102} /> -->
 <p>
-	Hi there! I'm Nicolai and this is my personal site! <img
-		src="nicolai.webp"
+	Hi there! I'm Nicolai and this is my personal site! 
+	<img
+		src={nicolai}
 		alt="Nicolai Skovvart"
 		width="200"
 		height="200"
@@ -25,10 +24,6 @@
 </p>
 <p>If you are looking for the <a href="https://tv.skovvart.dk">TV-guide</a>, look no further.</p>
 
-<!-- <FlexWrapper>
-  <Card pixumImageId={1049} url="services/" title="Services, man. Services." />
-  <Card pixumImageId={1080} url="contact/" title="Have you ever considered contacting people?" />
-</FlexWrapper> -->
 <style lang="scss">
 	.profile {
 		float: right;

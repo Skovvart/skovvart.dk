@@ -11,9 +11,12 @@ const config = {
 		adapter: adapter(),
 		prerender: {
 			default: true
+		},
+		trailingSlash: 'always',
+		files: {
+
 		}
-	},
-	trailingSlash: 'always'
+	}
 };
 
 export default config;
