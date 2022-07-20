@@ -13,9 +13,7 @@ const config = {
 			default: true
 		},
 		trailingSlash: 'always',
-		files: {
-
-		}
+		files: {}
 	}
 };
 

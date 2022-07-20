@@ -22,7 +22,7 @@
 			Blog
 		</a> -->
 		<a
-			aria-current={segment === '/about' ? 'page' : undefined}
+			aria-current={segment.startsWith('/about') ? 'page' : undefined}
 			class="header-navigation__item"
 			href="/about/"
 			sveltekit:prefetch
@@ -30,7 +30,7 @@
 			About
 		</a>
 		<a
-			aria-current={segment === '/services' ? 'page' : undefined}
+			aria-current={segment.startsWith('/services') ? 'page' : undefined}
 			class="header-navigation__item"
 			href="/services/"
 			sveltekit:prefetch

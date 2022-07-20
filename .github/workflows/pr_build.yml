@@ -1,6 +1,6 @@
 name: Build on pull requests
 
-on:  
+on:
   pull_request:
     branches:
       - main
