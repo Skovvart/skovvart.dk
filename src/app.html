@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta name="theme-color" content="#4b7599" />
+
+		<link rel="manifest" href="%sveltekit.assets%/manifest.json" crossorigin="use-credentials" />
+		<link rel="icon" type="image/png" href="%sveltekit.assets%/favicon.png" />
+		<link rel="shortcut icon" type="image/png" href="%sveltekit.assets%/logo-192.png" />
+		<link rel="shortcut icon" sizes="192x192" href="%sveltekit.assets%/logo-192.png" />
+		<link rel="apple-touch-icon" href="%sveltekit.assets%/logo-192.png" />
+
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab&display=swap"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'"
+		/>
+		<noscript>
+			<link
+				rel="stylesheet"
+				href="https://fonts.googleapis.com/css?family=Roboto%7CRoboto+Slab&display=swap"
+			/>
+		</noscript>
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<script>
+			/* IE css variables support */
+			if (!document.currentScript)
+				d.write(
+					'<script src=https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2.3.2><' +
+						'/script><script>cssVars({})<' +
+						'/script>'
+				);
+		</script>
+		%sveltekit.head%
+	</head>
+
+	<body>
+		%sveltekit.body%
+	</body>
+</html>

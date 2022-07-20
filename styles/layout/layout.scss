@@ -1,0 +1,8 @@
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	place-items: center;
+	background-color: var(--color-primary);
+	background-image: var(--gradient-dark);
+}
