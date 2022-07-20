@@ -5,7 +5,8 @@
 	"short_name": "Skovvart",
 	"display": "minimal-ui",
 	"start_url": "/",
-	"icons": [{
+	"icons": [
+		{
 			"src": "logo-192.png",
 			"sizes": "192x192",
 			"type": "image/png",
