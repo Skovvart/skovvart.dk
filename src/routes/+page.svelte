@@ -1,5 +1,5 @@
 <script lang="ts">
-	import nicolai from './nicolai.webp';
+	import nicolai from '$lib/images/nicolai.webp';
 </script>
 
 <svelte:head>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import nicolai from './nicolai.webp';
+	import nicolai from '$lib/images/nicolai.webp';
 </script>
 
 <svelte:head>
@@ -19,9 +19,7 @@
 	/>
 </p>
 <p>
-	I am a software development and technology cand. it. graduate from the IT University of Copenhagen
-	currently working as a Managing Architect at Immeo implementing impressive web solutions using
-	Microsoft technologies.
+	I am Head of Software Engineering at the IT consulting firm Immeo, focusing on improving our technical solutions across customers and projects.
 </p>
 <p>
 	This site is my personal playground, primarily used for small web-experiments in the .NET and web
