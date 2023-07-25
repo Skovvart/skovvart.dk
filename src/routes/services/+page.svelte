@@ -6,7 +6,7 @@
 <h1>Services</h1>
 
 <p>
-	I work as a Managing Architect for <a href="https://www.immeo.dk/" target="_blank" rel="noopener"
+	I work as Head of Software Engineering at <a href="https://www.immeo.dk/" target="_blank" rel="noopener"
 		>Immeo P/S</a
 	> where we have many service offerings, primarily in the modern Microsoft applications space.
 </p>

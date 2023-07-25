@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: npm install
-        run: npm install
+      - name: install pnpm
+        run: npm install --global pnpm
+      - name: pnpm install
+        run: pnpm install
       - name: export
         run: npm run build
       - name: Upload to FTP

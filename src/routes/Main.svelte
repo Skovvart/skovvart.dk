@@ -6,7 +6,6 @@
 </main>
 
 <style lang="scss">
-	@import '../styles/theme.scss';
 	.main {
 		width: 45em;
 		max-width: 100%;

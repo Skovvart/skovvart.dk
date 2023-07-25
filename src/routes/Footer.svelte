@@ -9,7 +9,7 @@
 </footer>
 
 <style lang="scss">
-	@import '../styles/theme.scss';
+	@import '$lib/styles/theme.scss';
 	.footer {
 		width: 100%;
 		max-width: 80ch;
