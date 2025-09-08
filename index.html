@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolai Skovvart - Softwarearkitekt &amp; Full Stack Udvikler</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon-light.ico" sizes="any" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="favicon.ico" sizes="any" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="Softwarearkitekt &amp; Full Stack Udvikler" />
+    <meta name="author" content="Nicolai Skovvart" />
+
+    <meta property="og:title" content="Nicolai Skovvart - Softwarearkitekt &amp; Full Stack Udvikler" />
+    <meta property="og:description" content="Softwarearkitekt &amp; Full Stack Udvikler" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="deer.jpg">
+    <meta name="twitter:image:alt" content="Picture of Nicolai Skovvart">
+    <meta name="twitter:title" content="Nicolai Skovvart - Softwarearkitekt &amp; Full Stack Udvikler" />
+    <meta name="twitter:description" content="Softwarearkitekt &amp; Full Stack Udvikler" />
+    <style>
+        @property --offset {
+            syntax: "<number>";
+            inherits: false;
+            initial-value: 0;
+        }
+
+        @keyframes bg {
+            0% {
+                --offset: 0;
+            }
+
+            100% {
+                --offset: 48;
+            }
+        }
+
+        @keyframes gradientShift {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        :root {
+            color-scheme: light dark;
+            --background-color: light-dark(#e4f3fc, #446a8b);
+            --primary-color: light-dark(#9cbaa8, #f7fbfc);
+
+            --scale: 1.4px;
+            --size: 16px;
+
+            --gradient-primary: linear-gradient(135deg,
+                    hsl(262 83% 58%) 0%,
+                    hsl(213 94% 68%) 35%,
+                    hsl(182 100% 76%) 70%,
+                    hsl(142 76% 73%) 100%);
+        }
+
+        body {
+            background-color: var(--background-color);
+            background-image: radial-gradient(var(--primary-color) var(--scale), transparent var(--scale)), radial-gradient(var(--primary-color) var(--scale), var(--background-color) var(--scale));
+            background-size: calc(var(--size) * 2) calc(var(--size) * 2);
+            background-position: calc(var(--offset) * 1px) calc(var(--offset) * 1px), var(--size) var(--size);
+
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            border-width: 0;
+            border-style: solid;
+
+            font-family: system-ui, sans-serif;
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            body {
+                animation: bg 5s infinite alternate ease-in-out both;
+            }
+        }
+
+        .card {
+            border-radius: 1.5rem;
+            margin-top: 2rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 56rem;
+            padding: 2rem;
+            background-color: rgb(from var(--background-color) r g b / 90%);
+            text-align: center;
+            box-shadow: 0 10px 40px -10px hsl(222 47% 11% / 0.6);
+
+            img {
+                border-radius: 50%;
+                max-width: 35%;
+            }
+
+            h1 {
+                font-size: 2em;
+                background: var(--gradient-primary);
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-size: 400% 400%;
+                animation: gradientShift 8s ease infinite;
+            }
+
+            h2 {
+                font-size: 1.25em;
+                font-weight: 300;
+            }
+        }
+
+        .social {
+            text-align: center;
+
+            ul {
+                list-style: none;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                gap: 2em;
+
+            }
+        }
+
+        .tv-guide {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 1em;
+            margin-top: 1em;
+        }
+
+        a {
+            color: currentColor;
+            font-size: 2em;
+            padding: 0.5em;
+
+            svg {
+                width: 1em;
+                height: 1em;
+            }
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            border-bottom: 3px solid currentColor;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card">
+        <picture>
+            <source media="(width < 600px)" srcset="deer-cropped.jpg" />
+            <img src="deer.jpg" alt="Picture of Nicolai Skovvart" />
+        </picture>
+        <h1>Nicolai Skovvart</h1>
+        <h2>Softwarearkitekt &amp; Full Stack Udvikler</h2>
+        <aside class="social">
+            <ul>
+                <li><a href="https://github.com/skovvart"><svg role="img" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                            <title>GitHub</title>
+                            <path
+                                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                        </svg></a></li>
+                <li><a href="https://www.linkedin.com/in/nicolai-skovvart/"><svg fill="currentColor" height="200px"
+                            width="200px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 45.959 45.959"
+                            xml:space="preserve">
+                            <title>LinkedIn</title>
+                            <g stroke-width="0"></g>
+                            <g i stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g>
+                                <path
+                                    d="M5.392,0.492C2.268,0.492,0,2.647,0,5.614c0,2.966,2.223,5.119,5.284,5.119c1.588,0,2.956-0.515,3.957-1.489 c0.96-0.935,1.489-2.224,1.488-3.653C10.659,2.589,8.464,0.492,5.392,0.492z M7.847,7.811C7.227,8.414,6.34,8.733,5.284,8.733 C3.351,8.733,2,7.451,2,5.614c0-1.867,1.363-3.122,3.392-3.122c1.983,0,3.293,1.235,3.338,3.123 C8.729,6.477,8.416,7.256,7.847,7.811z">
+                                </path>
+                                <path
+                                    d="M0.959,45.467h8.988V12.422H0.959V45.467z M2.959,14.422h4.988v29.044H2.959V14.422z">
+                                </path>
+                                <path
+                                    d="M33.648,12.422c-4.168,0-6.72,1.439-8.198,2.792l-0.281-2.792H15v33.044h9.959V28.099c0-0.748,0.303-2.301,0.493-2.711 c1.203-2.591,2.826-2.591,5.284-2.591c2.831,0,5.223,2.655,5.223,5.797v16.874h10v-18.67 C45.959,16.92,39.577,12.422,33.648,12.422z M43.959,43.467h-6V28.593c0-4.227-3.308-7.797-7.223-7.797 c-2.512,0-5.358,0-7.099,3.75c-0.359,0.775-0.679,2.632-0.679,3.553v15.368H17V14.422h6.36l0.408,4.044h1.639l0.293-0.473 c0.667-1.074,2.776-3.572,7.948-3.572c4.966,0,10.311,3.872,10.311,12.374V43.467z">
+                                </path>
+                            </g>
+                        </svg> </a></li>
+                <li><a href="mailto:nicolai@skovvart.dk"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <title>Email</title>
+                            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg></a></li>
+            </ul>
+        </aside>
+    </main>
+    <aside class="tv-guide">
+        <a href="https://tv.skovvart.dk">
+            <svg height="200px" width="200px" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+                xml:space="preserve" stroke="currentColor" fill="currentColor">
+                <title>TV Guide</title>
+                <g stroke-width="1"></g>
+                <g stroke-linecap="round" stroke-linejoin="round"></g>
+                <g>
+                    <g>
+                        <path
+                            d="M503.671,85.355L9.636,49.425c-2.553-0.167-4.943,0.688-6.772,2.381C1.039,53.508,0,55.89,0,58.385v332.351 c0,2.496,1.039,4.877,2.864,6.579c1.671,1.548,3.855,2.403,6.118,2.403c0.215,0,0.434-0.009,0.653-0.022l241.873-17.591v55.162 l-37.693,7.538c-4.864,0.974-8.018,5.706-7.044,10.57c0.851,4.267,4.605,7.219,8.798,7.219c0.583,0,1.175-0.057,1.772-0.175 l89.825-17.965c4.864-0.974,8.018-5.706,7.044-10.57c-0.969-4.864-5.676-8.026-10.57-7.044l-34.167,6.833v-52.876l234.197-17.032 c4.693-0.342,8.329-4.254,8.329-8.96V94.315C512,89.609,508.364,85.697,503.671,85.355z M494.035,346.455l-238.337,17.333h-4.19 v0.305L17.965,381.078V68.043l476.07,34.623V346.455z">
+                        </path>
+                    </g>
+                    <g>
+                        <path
+                            d="M115.588,107.824c-2.461-4.311-7.947-5.803-12.255-3.342l-62.877,35.93c-4.307,2.461-5.803,7.947-3.342,12.255 c1.658,2.903,4.689,4.526,7.807,4.526c1.509,0,3.044-0.382,4.447-1.184l62.877-35.93 C116.553,117.618,118.048,112.131,115.588,107.824z">
+                        </path>
+                    </g>
+                    <g>
+
+                        <path
+                            d="M187.351,116.64c-2.557-4.254-8.079-5.636-12.325-3.079L40.289,194.403c-4.254,2.553-5.632,8.07-3.079,12.325 c1.684,2.807,4.658,4.36,7.711,4.36c1.575,0,3.167-0.412,4.614-1.281l134.737-80.842 C188.526,126.412,189.904,120.894,187.351,116.64z">
+                        </path>
+                    </g>
+                </g>
+            </svg></a>
+    </aside>
+</body>
+
+</html>
