@@ -99,6 +99,8 @@
             img {
                 border-radius: 50%;
                 max-width: 35%;
+                aspect-ratio: 1/1;
+                height: auto;
             }
 
             h1 {
@@ -161,8 +163,8 @@
 <body>
     <main class="card">
         <picture>
-            <source media="(width < 600px)" srcset="deer-cropped.jpg" />
-            <img src="deer.jpg" alt="Picture of Nicolai Skovvart" />
+            <source media="(width < 600px)" srcset="deer-cropped.webp" />
+            <img src="deer.webp" fetchpriority="high" alt="Picture of Nicolai Skovvart" />
         </picture>
         <h1>Nicolai Skovvart</h1>
         <h2>Softwarearkitekt &amp; Full Stack Udvikler</h2>
