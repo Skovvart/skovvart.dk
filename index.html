@@ -8,18 +8,18 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="icon" href="favicon-light.ico" sizes="any" media="(prefers-color-scheme: light)">
     <link rel="icon" href="favicon.ico" sizes="any" media="(prefers-color-scheme: dark)">
-    <meta name="description" content="Softwarearkitekt &amp; Full Stack Udvikler" />
+    <meta name="description" content=".NET Softwarearkitekt &amp; Full Stack Udvikler" />
     <meta name="author" content="Nicolai Skovvart" />
 
-    <meta property="og:title" content="Nicolai Skovvart - Softwarearkitekt &amp; Full Stack Udvikler" />
-    <meta property="og:description" content="Softwarearkitekt &amp; Full Stack Udvikler" />
+    <meta property="og:title" content="Nicolai Skovvart - .NET Softwarearkitekt &amp; Full Stack Udvikler" />
+    <meta property="og:description" content=".NET Softwarearkitekt &amp; Full Stack Udvikler" />
     <meta property="og:type" content="website" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="deer.jpg">
     <meta name="twitter:image:alt" content="Picture of Nicolai Skovvart">
-    <meta name="twitter:title" content="Nicolai Skovvart - Softwarearkitekt &amp; Full Stack Udvikler" />
-    <meta name="twitter:description" content="Softwarearkitekt &amp; Full Stack Udvikler" />
+    <meta name="twitter:title" content="Nicolai Skovvart - .NET Softwarearkitekt &amp; Full Stack Udvikler" />
+    <meta name="twitter:description" content=".NET Softwarearkitekt &amp; Full Stack Udvikler" />
     <style>
         @property --offset {
             syntax: "<number>";
@@ -50,12 +50,15 @@
         }
 
         :root {
-            color-scheme: light dark;
+            --color-scheme: light dark;
+            color-scheme: var(--color-scheme);
             --background-color: light-dark(#e4f3fc, #446a8b);
             --primary-color: light-dark(#9cbaa8, #f7fbfc);
 
             --scale: 1.4px;
             --size: 16px;
+
+            --shadow: 0 0.5em 4em -1em hsl(222 47% 11% / 0.6);
 
             --gradient-primary: linear-gradient(135deg,
                     hsl(262 83% 58%) 0%,
@@ -94,9 +97,10 @@
             padding: 2rem;
             background-color: rgb(from var(--background-color) r g b / 90%);
             text-align: center;
-            box-shadow: 0 10px 40px -10px hsl(222 47% 11% / 0.6);
+            box-shadow: var(--shadow);
 
             img {
+                box-shadow: var(--shadow);
                 border-radius: 50%;
                 max-width: 35%;
                 aspect-ratio: 1/1;
@@ -127,9 +131,7 @@
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
-
                 gap: 2em;
-
             }
         }
 
@@ -150,12 +152,51 @@
                 width: 1em;
                 height: 1em;
             }
+
+            &:hover,
+            &:focus,
+            &:active {
+                border-bottom: 3px solid currentColor;
+            }
         }
 
-        a:hover,
-        a:focus,
-        a:active {
-            border-bottom: 3px solid currentColor;
+
+        .color-scheme-toggle {
+            position: fixed;
+            bottom: 1rem;
+            left: 1rem;
+            cursor: pointer;
+
+            svg {
+                width: 2rem;
+                height: 2rem;
+                stroke: currentColor;
+            }
+
+            input {
+                position: absolute;
+                opacity: 0;
+                pointer-events: none;
+            }
+
+            &:hover,
+            &:focus-within,
+            &:active {
+                border-bottom: 3px solid currentColor;
+            }
+        }
+
+
+        @media (prefers-color-scheme: light) {
+            :root:has(.color-scheme-toggle input:checked) {
+                --color-scheme: dark;
+            }
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:has(.color-scheme-toggle input:checked) {
+                --color-scheme: light;
+            }
         }
     </style>
 </head>
@@ -167,7 +208,7 @@
             <img src="deer.webp" fetchpriority="high" alt="Picture of Nicolai Skovvart" />
         </picture>
         <h1>Nicolai Skovvart</h1>
-        <h2>Softwarearkitekt &amp; Full Stack Udvikler</h2>
+        <h2>.NET Softwarearkitekt &amp; Full Stack Udvikler</h2>
         <aside class="social">
             <ul>
                 <li><a href="https://github.com/skovvart"><svg role="img" viewBox="0 0 24 24"
@@ -231,6 +272,38 @@
                 </g>
             </svg></a>
     </aside>
+    <aside class="color-scheme-toggle">
+        <label class="color-scheme-toggle">
+            <input type="checkbox" aria-label="Toggle color scheme"
+                onclick="localStorage.setItem('colorSchemeOverride', this.checked);">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <title>Toggle color scheme</title>
+                <circle cx="12" cy="12" r="5"></circle>
+                <path d="M12 1v2"></path>
+                <path d="M12 21v2"></path>
+                <path d="M4.22 4.22l1.42 1.42"></path>
+                <path d="M18.36 18.36l1.42 1.42"></path>
+                <path d="M1 12h2"></path>
+                <path d="M21 12h2"></path>
+                <path d="M4.22 19.78l1.42-1.42"></path>
+                <path d="M18.36 5.64l1.42-1.42"></path>
+            </svg>
+        </label>
+    </aside>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const colorSchemeToggle = document.getElementById('color-scheme-toggle');
+            const overrideSystem = localStorage.getItem('colorSchemeOverride');
+            if (overrideSystem) {
+                colorSchemeToggle.checked = overrideSystem === 'true';
+            }
+        });
+
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 
 </html>
